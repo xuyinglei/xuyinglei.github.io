@@ -1,32 +1,146 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>bilibili | 樱语思绪</title><meta name="author" content="xuyinglei"><meta name="copyright" content="xuyinglei"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="挺感触的。5年前我开始玩b站吧，刚玩半年，也就是2016年，大会员出了。得知大会员出的消息的时候，我第一时间看知乎关于陈先生的说明和知乎评论，看到了也没啥感触：出就出吧，大不了攒钱充值，b站蛮良心的，倒了咋办。之后每年都会充大会员，基本上加上那时候送的大会员，我的大会员算是没断过。温水煮青蛙，太对了，果真预言家。刚搞大会员时，送了3&#x2F;6&#x2F;9个月。第一年萌节（2017年），大会员送了。蛮不错的。第二">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bilibili">
+<meta property="og:url" content="http://example.com/2022/04/11/bilibili/index.html">
+<meta property="og:site_name" content="樱语思绪">
+<meta property="og:description" content="挺感触的。5年前我开始玩b站吧，刚玩半年，也就是2016年，大会员出了。得知大会员出的消息的时候，我第一时间看知乎关于陈先生的说明和知乎评论，看到了也没啥感触：出就出吧，大不了攒钱充值，b站蛮良心的，倒了咋办。之后每年都会充大会员，基本上加上那时候送的大会员，我的大会员算是没断过。温水煮青蛙，太对了，果真预言家。刚搞大会员时，送了3&#x2F;6&#x2F;9个月。第一年萌节（2017年），大会员送了。蛮不错的。第二">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-04-11T06:13:16.000Z">
+<meta property="article:modified_time" content="2022-04-11T14:46:35.242Z">
+<meta property="article:author" content="xuyinglei">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/04/11/bilibili/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'bilibili',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-04-11 22:46:35'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-    if theme.reward.enable && theme.reward.QR_code
-      !=partial('includes/post/reward', {}, {cache: true})
-
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
-
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="樱语思绪" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/xuyinglei/picture-git@master/headimg.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">樱语思绪</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">bilibili</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-11T06:13:16.000Z" title="发表于 2022-04-11 14:13:16">2022-04-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-11T14:46:35.242Z" title="更新于 2022-04-11 22:46:35">2022-04-11</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="bilibili"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>挺感触的。5年前我开始玩b站吧，刚玩半年，也就是2016年，大会员出了。得知大会员出的消息的时候，我第一时间看知乎关于陈先生的说明和知乎评论，看到了也没啥感触：出就出吧，大不了攒钱充值，b站蛮良心的，倒了咋办。<br>之后每年都会充大会员，基本上加上那时候送的大会员，我的大会员算是没断过。<br>温水煮青蛙，太对了，果真预言家。<br><img src="https://s1.ax1x.com/2022/04/11/LZaRYD.jpg" alt="温水煮青蛙的大预言家" title="温水煮青蛙的大预言家"><br>刚搞大会员时，送了3/6/9个月。<br><img src="https://s1.ax1x.com/2022/04/11/LZaWfe.jpg" alt="送会员的承诺" title="送会员的承诺"><br>第一年萌节（2017年），大会员送了。蛮不错的。<br>第二年萌节（2018年），改了，要充钱。可惜没赶上，想想挺后悔的。<br><img src="https://s1.ax1x.com/2022/04/11/LZa2FO.jpg" alt="当时没想着买" title="当时没想着买"><br>第三年萌节（2019年），变成98送3/6/9个月了。当时节省饭钱，也算是攒出了100，充了。<br>第四年萌节（2020年），又多了个任务。也就是说，你交了98后还要去求你的同学朋友，才会给你的朋友1-3天大会员，你3/6/9个月。（图四）<br>真的，说实话，我真的没想到陈先生会骗人。在骗人之后，还会一步一步逼紧，挑战你忍耐的极限，压榨给你最后的福利。<br>实话说，大会员，挺值的。b站电影很多，动画是中国全网最全的。每次看新番能超前点播，看视频全程1080p＋，当时4k刚出来的时候还能第一时间体验，还有点优越感。每月5b币还能充漫读卷，一个月免费看20章漫画。<br>不过，也就这了吧。<br>新番老番去种子站都有，还是1080p的，碰巧还有10bit色深，除了有时候种子可能死了下不了；弹幕可以去bilibilijj下载；漫画也能找资源看；视频1080p看不了就看不了呗，720也能凑合。b站提供的服务都可以找到替代品。而且，如果你花心思捣鼓的话，碰巧还能搞出60fps看番的实时补帧软件—这可不香？电影没咋看过，暂且不提。<br>b站为了发展，搞大会员；为了安抚前朝逸民（b站站长叫碧诗，真名有逸字），搞赠送。那为啥不贯彻始终？就算不贯彻，那能不能不要一步一步逼近老用户的底线，逼走这批你的真正的粘性用户？老用户花了10年建立的社区氛围，现在的新用户享受着—-虽然在饭圈化，在低龄化，在多元化，在暴躁化，估计也快没了；老用户，老up们无私奉献与建立的各种东西，构成了B站二次元文化的一砖一瓦，也给b站以全网最佳的视频质量资本以不断吸引新用户，扩展b站（插个题外话，现在b站投稿码率也降低了，峰值码率1080p已经到不了6000k，甚至2000都没有吧，这就是视频网站？挺讽刺的。）老用户没有功劳也有苦劳，不求回报但也想一直享受福利—现在连福利也快没了吗？真就狡兔死，走狗烹；飞鸟尽，良弓藏？<br>我是老用户，只想要点本来就属于全部b站用户的权利。<br>我虽然有点生气，如果问我会不会放弃b站，我肯定还会坚持不放弃b站——毕竟b站学习教程质量数量全网第一丝毫不夸张，这真的找不到替代品。如果有一天b站连这些用户都留不住了，我应该去哪里找教程呢？这又是题外话了。<br>如果你问我我对陈先生的看法，我只会说，如果没有他，b站会倒闭；如果有了他，b站会变味。变味不是指b站二次元浓度降低了，而是指b站，已经不能再给你以温暖互助的感觉了。他不再是n站（niconico，日本弹幕网站，弹幕鼻祖）的后花园；不再是每天劳累之后，打开，就能看看不用太动脑子，能让你傻笑的，能给你温暖的的避风港；不是一个无私互助，不断分享自己的乐趣的茶会，而是一个商业网站（虽然早就是了，我现在才意识的到）；是一个很多人哗众取宠，吵架和不过脑子的话突然就会看见的、搞砸你心情的公共场所。<br>就像现在一样，无私互助的二次元文化，追求艺术美二次元文化（典型的就是mad，高艺术性，高成本，低回报），变成了lsp的二次元文化，充满拜金的二次元文化（有争议，不绝对，注意）。或许日本二次元文化，从根源来讲就是lsp文化，就是满足恶心的宅男，没有能力没有担当的那种宅；但是动画这种形式并没有错—就像书也有h书和圣贤书，但是书本身没错—就像Clannad，吹响吧上低音号，寻梦环游记这样的、能真正给人心灵以启迪激励的动画也是存在的啊！昙花一现，但是足以影响我，使我喜欢上动画。现在，新番能算的上给人启迪的居然就只有一部re0了。业界药丸，真的是业界药丸了吧，真的是能明显的感觉到已经在走下坡路了。现在的动画，说实话有些真的能让我感到恶心。——虽说这一段已经和b站没有太大关系了，姑且也就说说。<br>所以，朋友，听我一句劝，不要把b站当成你的网络家园。它是一个最好的学习网站，较好的追番网站，还行的娱乐网站，但它，只是一个网站。当你全身心依赖它的时候，它也许就会一把踢开你——因为你认识它，他不认识你；你有人情，而他看利益（不绝对）。他就是个网站，就是个平台；只有里面的up主才看人情，才吸引你，而它已经变了，已经不配了。你可以喜欢up，可以把up当偶像，但是你要酌情喜欢b站，因为它只是个网站。而且，真正爱你的，天天在你的身边，天天唠叨着你；你不向他们表达爱意，而说小破绽永远爱你，有够讽刺的。<br> 单指现如今的b站，我的观点不具有普遍性，而且也不是绝对对的——我现在就在担心，我写的文字会不会影响一个人，让他突然有看破红尘的感觉？别中二了，大家见识都短浅，我才疏学浅瞎写写，算个啥!所以要独立思考啊!<br> 希望有一天，能让我找到第三个温暖窝 避风港。其中有一个是自己的家。<br> 欢迎讨论，如有错误，请大家指正。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">xuyinglei</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/04/11/bilibili/">http://example.com/2022/04/11/bilibili/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">樱语思绪</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/04/11/%E5%BA%86%E7%A5%9Dblog%E7%BD%91%E7%AB%99%E8%90%BD%E5%9C%B0%EF%BC%81%E8%8A%9C%E6%B9%96%EF%BC%81/"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">庆祝blog网站落地！芜湖！</div></div></a></div><div class="next-post pull-right"><a href="/2022/04/11/%E5%86%85%E5%8D%B7%E6%B3%95%E5%88%99/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">内卷法则</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/xuyinglei/picture-git@master/headimg.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xuyinglei</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/17/%E6%95%B0%E5%AD%A6%E9%A2%98%E5%9E%8B%E6%95%B4%E7%90%86/" title="数学题型整理"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数学题型整理"/></a><div class="content"><a class="title" href="/2022/04/17/%E6%95%B0%E5%AD%A6%E9%A2%98%E5%9E%8B%E6%95%B4%E7%90%86/" title="数学题型整理">数学题型整理</a><time datetime="2022-04-17T04:26:46.000Z" title="发表于 2022-04-17 12:26:46">2022-04-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/%E8%AE%B0%E5%BD%95%E6%88%91%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%85%A8%E8%BF%87%E7%A8%8B/" title="记录我创建个人博客的全过程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记录我创建个人博客的全过程"/></a><div class="content"><a class="title" href="/2022/04/11/%E8%AE%B0%E5%BD%95%E6%88%91%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%85%A8%E8%BF%87%E7%A8%8B/" title="记录我创建个人博客的全过程">记录我创建个人博客的全过程</a><time datetime="2022-04-11T12:38:23.000Z" title="发表于 2022-04-11 20:38:23">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/%E5%BA%86%E7%A5%9Dblog%E7%BD%91%E7%AB%99%E8%90%BD%E5%9C%B0%EF%BC%81%E8%8A%9C%E6%B9%96%EF%BC%81/" title="庆祝blog网站落地！芜湖！"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="庆祝blog网站落地！芜湖！"/></a><div class="content"><a class="title" href="/2022/04/11/%E5%BA%86%E7%A5%9Dblog%E7%BD%91%E7%AB%99%E8%90%BD%E5%9C%B0%EF%BC%81%E8%8A%9C%E6%B9%96%EF%BC%81/" title="庆祝blog网站落地！芜湖！">庆祝blog网站落地！芜湖！</a><time datetime="2022-04-11T07:17:28.000Z" title="发表于 2022-04-11 15:17:28">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/bilibili/" title="bilibili"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="bilibili"/></a><div class="content"><a class="title" href="/2022/04/11/bilibili/" title="bilibili">bilibili</a><time datetime="2022-04-11T06:13:16.000Z" title="发表于 2022-04-11 14:13:16">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/%E5%86%85%E5%8D%B7%E6%B3%95%E5%88%99/" title="内卷法则"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="内卷法则"/></a><div class="content"><a class="title" href="/2022/04/11/%E5%86%85%E5%8D%B7%E6%B3%95%E5%88%99/" title="内卷法则">内卷法则</a><time datetime="2022-04-11T06:10:52.000Z" title="发表于 2022-04-11 14:10:52">2022-04-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2022 By xuyinglei</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
